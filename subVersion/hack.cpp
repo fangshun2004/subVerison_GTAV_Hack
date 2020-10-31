@@ -564,6 +564,33 @@ void hack::unlockHeistCars(float* arg)
 	}
 }
 
+void hack::unlockDoomsdayHeistCars(float* arg)
+{
+	dStatPushBack(string_to_hash("GANGOPS_FLOW_BITSET_MISS0"), 48326);
+}
+
+void hack::unlockCeoCars(float* arg)
+{
+	dStatPushBack(string_to_hash("AT_FLOW_VEHICLE_BS"), 255);
+}
+
+void hack::unlockAsCars(float* arg)
+{
+	dStatPushBack(string_to_hash("WVM_FLOW_VEHICLE_BS"), 255);
+}
+
+void hack::unlockPlane(float* arg)
+{
+	dStatPushBack(string_to_hash("LFETIME_HANGAR_BUY_UNDETAK"), 45);
+	dStatPushBack(string_to_hash("LFETIME_HANGAR_BUY_COMPLET"), 45); 
+}
+
+void hack::unlockCasinoHeistCars(float* arg)
+{
+	dStatPushBack(string_to_hash("H3_VEHICLESUSED"), -1);
+}
+
+
 void hack::unlockLSC(float* arg)
 {
 	dStatPushBack(string_to_hash("RACES_WON"), 50);
@@ -1174,8 +1201,8 @@ void hack::consumeStatQueue()
 				if (!m_dStat.empty())
 				{
 					g_pD3D9Render->m_bMBShowing = true;
-					g_pD3D9Render->m_sTitle = L"正在处理队列";
-					g_pD3D9Render->m_sDetail = L"剩余" + std::to_wstring(m_dStat.size()) + L"个待处理";
+					g_pD3D9Render->m_sTitle = L"姝ｅ湪澶勭悊闃熷垪";
+					g_pD3D9Render->m_sDetail = L"鍓╀綑" + std::to_wstring(m_dStat.size()) + L"涓緟澶勭悊";
 
 					unsigned int resotreHash = scriptGlobal(1387876).at(4).as<unsigned int>().value();
 					int resotreValue = scriptGlobal(939452).at(5526).as<int>().value();
@@ -1291,7 +1318,7 @@ void hack::renderPlayerList()
 {
 	for (size_t i = 0; i < 32; i++)
 	{
-		g_pSettings->updataFeature(g_iFeaturePlayerList[i], -1, g_iFeature[FEATURE_P_PLAYER_LIST], std::to_wstring(i) + L"玩家 >>", feat_parent);
+		g_pSettings->updataFeature(g_iFeaturePlayerList[i], -1, g_iFeature[FEATURE_P_PLAYER_LIST], std::to_wstring(i) + L"鐜╁ >>", feat_parent);
 	}
 }
 
