@@ -92,6 +92,11 @@ class hack : public trainer
 		void	casinoStatBitSet2(float* arg);
 		void	casinoHeistCut(feat* feature, int playerIndex);
 		void	unlockHeistCars(float* arg);
+		void	unlockDoomsdayHeistCars(float* arg);
+		void	unlockCeoCars(float* arg);
+		void	unlockAsCars(float* arg);
+		void	unlockPlane(float* arg);
+		void	unlockCasinoHeistCars(float* arg);
 		void	unlockLSC(float* arg);
 		void	unlockWeaponCamos(float* arg);
 		//void	unlockWeapon(float* arg);
